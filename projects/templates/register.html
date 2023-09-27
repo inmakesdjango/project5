@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My site</title>
+    <h1>Registration</h1>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token%}
+<!--    as in sql auth name=-->
+    USERNAME: <input type="text"  name="username" placeholder="ENTER USERNAME"><br>
+    FIRST NAME: <input type="text" name="first_name" placeholder="ENTER FIRST NAME"><br>
+    LASTNAME: <input type="text"  name="last_name" placeholder="ENTER LAST NAME"><br>
+     MAIL ID: <input type="email" name="email" placeholder="mailid"><br>
+    PASSWORD: <input type="text" name="password" placeholder="ENTER PASSWORD"><br>
+    CONFIRM PASSWORD: <input type="text" name="CONFIRM PASSWORD" placeholder="CONFIRM PASSWORD"><br>
+    <input type="submit">
+</form>
+{% for msg in messages%}
+{{msg}}
+{% endfor %}
+</body>
+</html>
